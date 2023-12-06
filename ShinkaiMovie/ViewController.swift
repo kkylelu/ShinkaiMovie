@@ -47,8 +47,10 @@ class ViewController: UIViewController {
     
     // Playback properties
     let audioPlayer = AVPlayer()
+    var isPlaying = true
     var currentTrackIndex = 0
     var currentMovieIndex = 0
+    
     
     
     override func viewDidLoad() {
@@ -67,7 +69,6 @@ class ViewController: UIViewController {
         moviePageControl.currentPage = currentMovieIndex
         
         currentTrackIndex = 0
-        
         
                 let url = Bundle.main.url(forResource: "ZenzenzenseCut", withExtension: "mp3")!
                 let playerItem = AVPlayerItem(url: url)
@@ -104,19 +105,22 @@ class ViewController: UIViewController {
         updateUI()
     }
 
-    // Actions: 播放音樂
+    // Actions: 暫停音樂
     
     @IBAction func playButton(_ sender: Any) {
-     
-        
+        // 用 `!` 布林值來切換是否播放
+        isPlaying = !isPlaying
+                if isPlaying {
+                    // 更新為暫停 symbol，並開始播放音樂
+                    playIcon.setImage(UIImage(systemName: "pause.circle.fill"), for: .normal)
+                    audioPlayer.play()
+                } else {
+                    // 更新為播放symbol，並暫停音樂
+                    playIcon.setImage(UIImage(systemName: "play.circle.fill"), for: .normal)
+                    audioPlayer.pause()
+                }
     }
     
-    
-    //Actions: 暫停音樂
-    func audioStop() {
-            playIcon.setImage(UIImage(systemName: "play.fill"), for: .normal)
-            audioPlayer.pause()
-        }
     
     
     @IBAction func nextMusic(_ sender: Any) {
@@ -129,9 +133,10 @@ class ViewController: UIViewController {
     
 }
 
+/*
 // 加入 Preview 即時預覽
 #Preview {
     let storyboard = UIStoryboard(name: "Main", bundle: nil)
     return storyboard.instantiateViewController(withIdentifier: "ViewController")
 }
-
+*/
