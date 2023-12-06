@@ -32,7 +32,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SU2-Ut-nTK">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SU2-Ut-nTK" userLabel="preButton">
                                 <rect key="frame" x="81" y="755" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" systemColor="labelColor"/>
@@ -42,11 +42,10 @@
                                     <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="22"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="preMovie:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7eZ-jf-Z4c"/>
-                                    <action selector="preMusic:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vSu-TY-Yo4"/>
+                                    <action selector="previousPage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7eZ-jf-Z4c"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kU2-Uw-wM9">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kU2-Uw-wM9" userLabel="nextButton">
                                 <rect key="frame" x="276" y="755" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" systemColor="labelColor"/>
@@ -55,13 +54,15 @@
                                     <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="22"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="nextMovie:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MNI-jm-x7i"/>
-                                    <action selector="nextMusic:" destination="BYZ-38-t0r" eventType="touchUpInside" id="18n-9W-rcl"/>
+                                    <action selector="nextPage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MNI-jm-x7i"/>
                                 </connections>
                             </button>
                             <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="XWP-hz-P7r">
                                 <rect key="frame" x="138" y="612" width="116" height="26"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="pageControlChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="ewv-r5-hrr"/>
+                                </connections>
                             </pageControl>
                             <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PKr-mG-2la">
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="604"/>
@@ -117,12 +118,12 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <swipeGestureRecognizer direction="left" id="Ujq-8k-zUw" userLabel="left_Swipe Gesture Recognizer">
                     <connections>
-                        <action selector="nextMovie:" destination="BYZ-38-t0r" id="QYz-LT-DZ3"/>
+                        <action selector="nextPage:" destination="BYZ-38-t0r" id="QYz-LT-DZ3"/>
                     </connections>
                 </swipeGestureRecognizer>
                 <swipeGestureRecognizer direction="right" id="PxY-Zd-a4m" userLabel="right_Swipe Gesture Recognizer">
                     <connections>
-                        <action selector="preMovie:" destination="BYZ-38-t0r" id="ZjQ-gZ-KG9"/>
+                        <action selector="previousPage:" destination="BYZ-38-t0r" id="oNh-7n-43K"/>
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
