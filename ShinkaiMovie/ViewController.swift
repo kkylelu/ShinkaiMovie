@@ -57,6 +57,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         updateUI()
+        //setupSwipeGestures()
     }
     
     
@@ -133,10 +134,13 @@ class ViewController: UIViewController {
           
       }
     
-}
+        
+    }
+    
+    
 
 /*
-// 加入 Preview 即時預覽
+// Preview 即時預覽
 #Preview {
     let storyboard = UIStoryboard(name: "Main", bundle: nil)
     return storyboard.instantiateViewController(withIdentifier: "ViewController")
