@@ -13,6 +13,9 @@
 		276D2B942B1DA89E00306530 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 276D2B922B1DA89E00306530 /* Main.storyboard */; };
 		276D2B962B1DA89F00306530 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 276D2B952B1DA89F00306530 /* Assets.xcassets */; };
 		276D2B992B1DA89F00306530 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 276D2B972B1DA89F00306530 /* LaunchScreen.storyboard */; };
+		276D2BA32B1F0E8E00306530 /* GrandEscapeCut.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 276D2BA02B1F0E8E00306530 /* GrandEscapeCut.mp3 */; };
+		276D2BA42B1F0E8E00306530 /* KanataCut.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 276D2BA12B1F0E8E00306530 /* KanataCut.mp3 */; };
+		276D2BA52B1F0E8E00306530 /* ZenzenzenseCut.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 276D2BA22B1F0E8E00306530 /* ZenzenzenseCut.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		276D2B952B1DA89F00306530 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		276D2B982B1DA89F00306530 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		276D2B9A2B1DA89F00306530 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		276D2BA02B1F0E8E00306530 /* GrandEscapeCut.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = GrandEscapeCut.mp3; sourceTree = "<group>"; };
+		276D2BA12B1F0E8E00306530 /* KanataCut.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = KanataCut.mp3; sourceTree = "<group>"; };
+		276D2BA22B1F0E8E00306530 /* ZenzenzenseCut.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ZenzenzenseCut.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +69,9 @@
 				276D2B952B1DA89F00306530 /* Assets.xcassets */,
 				276D2B972B1DA89F00306530 /* LaunchScreen.storyboard */,
 				276D2B9A2B1DA89F00306530 /* Info.plist */,
+				276D2BA02B1F0E8E00306530 /* GrandEscapeCut.mp3 */,
+				276D2BA12B1F0E8E00306530 /* KanataCut.mp3 */,
+				276D2BA22B1F0E8E00306530 /* ZenzenzenseCut.mp3 */,
 			);
 			path = ShinkaiMovie;
 			sourceTree = "<group>";
@@ -126,6 +135,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				276D2B992B1DA89F00306530 /* LaunchScreen.storyboard in Resources */,
+				276D2BA32B1F0E8E00306530 /* GrandEscapeCut.mp3 in Resources */,
+				276D2BA42B1F0E8E00306530 /* KanataCut.mp3 in Resources */,
+				276D2BA52B1F0E8E00306530 /* ZenzenzenseCut.mp3 in Resources */,
 				276D2B962B1DA89F00306530 /* Assets.xcassets in Resources */,
 				276D2B942B1DA89E00306530 /* Main.storyboard in Resources */,
 			);
@@ -300,7 +312,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -329,7 +341,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

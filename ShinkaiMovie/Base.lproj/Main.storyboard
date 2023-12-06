@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_12" orientation="portrait" appearance="dark"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -38,6 +39,9 @@
                                 <buttonConfiguration key="configuration" style="plain">
                                     <backgroundConfiguration key="background" image="play.circle.fill" catalog="system"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="playButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="m0n-zm-K3T"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SU2-Ut-nTK">
                                 <rect key="frame" x="81" y="755" width="30" height="30"/>
@@ -49,6 +53,7 @@
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="pre:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7eZ-jf-Z4c"/>
+                                    <action selector="preMusic:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vSu-TY-Yo4"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kU2-Uw-wM9">
@@ -61,6 +66,7 @@
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="next:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MNI-jm-x7i"/>
+                                    <action selector="nextMusic:" destination="BYZ-38-t0r" eventType="touchUpInside" id="18n-9W-rcl"/>
                                 </connections>
                             </button>
                             <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="XWP-hz-P7r">
@@ -96,6 +102,7 @@
                         <outlet property="moviePageControl" destination="XWP-hz-P7r" id="MCt-cU-dBr"/>
                         <outlet property="movieTitleJP" destination="RXY-5I-NU5" id="zXm-aE-XBX"/>
                         <outlet property="movieTitleTW" destination="pJF-9b-7jO" id="RxX-pF-Ldd"/>
+                        <outlet property="playIcon" destination="eZg-aw-cs0" id="FjI-lv-hSM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

@@ -6,10 +6,20 @@
 //
 
 import UIKit
+import AVFoundation
 
 
 class ViewController: UIViewController {
     
+    // UI components
+    @IBOutlet weak var movieImageView: UIImageView!
+    @IBOutlet weak var movieLabel: UILabel!
+    @IBOutlet weak var movieTitleTW: UILabel!
+    @IBOutlet weak var movieTitleJP: UILabel!
+    @IBOutlet weak var moviePageControl: UIPageControl!
+    @IBOutlet weak var playIcon: UIButton!
+    
+    // Data Properties
     // 定義 String 陣列，裡面包含了三部電影名稱。
     let movie = ["yourName", "weather", "suzume"]
     // 定義 String 陣列，裡面包含了三部電影中文標題。
@@ -29,59 +39,94 @@ class ViewController: UIViewController {
     """
     
     ]
+    let musicTracks = [
+        "ZenzenzenseCut",
+        "GrandEscapeCut",
+        "KanataCut"
+    ]
     
-    var index = 0
-    @IBOutlet weak var movieImageView: UIImageView!
-    @IBOutlet weak var movieLabel: UILabel!
-    @IBOutlet weak var movieTitleTW: UILabel!
-    @IBOutlet weak var movieTitleJP: UILabel!
-    @IBOutlet weak var moviePageControl: UIPageControl!
+    // Playback properties
+    let audioPlayer = AVPlayer()
+    var currentTrackIndex = 0
+    var currentMovieIndex = 0
     
-    
-    func updateUI(){
-        movieImageView.image = UIImage(named: movie[index])
-        movieLabel.text = intro[index]
-        movieTitleTW.text = movieNameTW[index]
-        movieTitleJP.text = movieNameJP[index]
-        moviePageControl.currentPage = index
-        
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         updateUI()
     }
-
-    // 播放音樂
-    func playSound () {
+    
+    
+    // UI Updates
+    func updateUI(){
+        movieImageView.image = UIImage(named: movie[currentMovieIndex])
+        movieLabel.text = intro[currentMovieIndex]
+        movieTitleTW.text = movieNameTW[currentMovieIndex]
+        movieTitleJP.text = movieNameJP[currentMovieIndex]
+        moviePageControl.currentPage = currentMovieIndex
+        
+        currentTrackIndex = 0
+        
+        
+                let url = Bundle.main.url(forResource: "ZenzenzenseCut", withExtension: "mp3")!
+                let playerItem = AVPlayerItem(url: url)
+                audioPlayer.replaceCurrentItem(with: playerItem)
+                audioPlayer.play()
         
     }
     
-    // 下一部電影
+
+    
+
+    
+    // Actions: 下一部電影
     
     @IBAction func next(_ sender: Any) {
         /*
          `% movie.count` 以 % 取餘數，讓計算結果等於 0，就會回到第一部重來，達到無限循環的效果。
          例如 movie.count 共 3 部電影，index 到第 2 部時 (2 + 1) % 3 = 0，回到第一部。
         */
-        index = (index + 1) % movie.count
+        currentMovieIndex = (currentMovieIndex + 1) % movie.count
         updateUI()
         
     }
    
     
     
-    // 上一部電影
+    // Actions: 上一部電影
     /*
      將電影總數加到索引上，減去 1，然後取餘數以處理負索引情況
      如果 index 為 0，下一個 index 為 (0 + 3 - 1) % 3 = 2 回到最後一部。
      */
     @IBAction func pre(_ sender: Any) {
-        index = (index + movie.count - 1) % movie.count
+        currentMovieIndex = (currentMovieIndex + movie.count - 1) % movie.count
         updateUI()
     }
 
+    // Actions: 播放音樂
+    
+    @IBAction func playButton(_ sender: Any) {
+     
+        
+    }
+    
+    
+    //Actions: 暫停音樂
+    func audioStop() {
+            playIcon.setImage(UIImage(systemName: "play.fill"), for: .normal)
+            audioPlayer.pause()
+        }
+    
+    
+    @IBAction func nextMusic(_ sender: Any) {
+         
+      }
+      
+      @IBAction func preMusic(_ sender: Any) {
+          
+      }
+    
 }
 
 // 加入 Preview 即時預覽
