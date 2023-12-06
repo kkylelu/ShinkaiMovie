@@ -42,7 +42,7 @@
                                     <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="22"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="pre:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7eZ-jf-Z4c"/>
+                                    <action selector="preMovie:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7eZ-jf-Z4c"/>
                                     <action selector="preMusic:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vSu-TY-Yo4"/>
                                 </connections>
                             </button>
@@ -55,7 +55,7 @@
                                     <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="22"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="next:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MNI-jm-x7i"/>
+                                    <action selector="nextMovie:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MNI-jm-x7i"/>
                                     <action selector="nextMusic:" destination="BYZ-38-t0r" eventType="touchUpInside" id="18n-9W-rcl"/>
                                 </connections>
                             </button>
