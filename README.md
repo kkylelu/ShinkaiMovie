@@ -5,7 +5,7 @@
 ![](https://github.com/kkylelu/kkylelu.github.io/blob/main/2023-12-07-makoto-shinkai-film-app-page-control-button-gesture-avfoundation/Shinkai.gif)
 *操作示範 GIF*
 
-https://github.com/kkylelu/ShinkaiMovie/assets/61376338/bf7a3495-3290-44a5-a2e8-6e9e63c9999c
+https://github.com/kkylelu/ShinkaiMovie/assets/61376338/bf7a3495-3290-44a5-a2e8-6e9e63c9999c  
 *操作示範搭配音樂（注意影片音量）*
 
 ## 學習目標
